@@ -266,4 +266,112 @@ Ans:
     return 0;
     
     }
+-------------------------------------------------------------------------------------------------------------------------------
+6.Write a program to print all elements of an array.
+Ans:
 
+    #include <bits/stdc++.h>
+    using namespace std;
+    int main()
+    {
+    vector<int> numbers={1,2,3,4,5};
+    for(int i=0;i<numbers.size();i++){
+       cout<<numbers[i]<<"\n";
+       }
+
+    return 0;
+    }
+-----------------------------------------------------------------------------------
+7. Write a program to find the sum of all elements in an array.
+Ans:
+
+       #include <bits/stdc++.h>
+       using namespace std;
+
+        int main() 
+        {
+        vector<int> numbers={1,2,3,4,5};
+        int sum=0;
+        for(int i=0;i<numbers.size();i++){
+          sum+=numbers[i];
+        }
+        cout << sum ;
+        return 0;
+    }
+-----------------------------------------------------------------------------------
+8. Write a program to find the largest element in an array.
+Ans:
+
+        #include <bits/stdc++.h>
+        using namespace std;
+
+        int main() 
+        {
+        vector<int> arr={1,2,5,4,12,10};
+        int largest=arr[0];
+        for(int i=0;i<arr.size();i++){
+          if(largest<arr[i]){
+            largest=arr[i];
+          }
+        }
+        cout <<largest;
+        return 0;
+    }
+------------------------------------------------------------------------------------
+9.Write a program to find the smallest element in an array.
+Ans:
+
+    #include <bits/stdc++.h>
+    using namespace std;
+
+    int main() 
+    {
+    vector<int> arr={1,2,5,4,12,10};
+    int largest=arr[0];
+    for(int i=0;i<arr.size();i++){
+      if(largest>arr[i]){
+        largest=arr[i];
+      }
+    }
+    cout <<largest;
+    return 0;
+    }
+------------------------------------------------------------------------------------
+10. Write a program to find the average of elements in an array.
+
+    
+        #include <bits/stdc++.h>
+        using namespace std;
+
+        int main() 
+        {
+        vector<int> arr={1,2,5,4,12,10};
+        double avg=0.0;
+        for(int i=0;i<arr.size();i++){
+          avg=avg+arr[i];
+        }
+        cout <<avg/arr.size();
+        return 0;
+    }
+--------------------------------------------------------------------------------------
+10. Write a program to count the number of even and odd elements in an array.
+
+        #include <bits/stdc++.h>
+        using namespace std;
+
+        int main() 
+        {
+        vector<int> arr={1,2,4,3,5,6,7,8};
+        int even=0;
+        int odd=0;
+        for(int i=0;i<arr.size();i++){
+          if(arr[i]%2==0){
+            even++;
+          }else if(arr[i]%2!=0){
+            odd++;
+          }
+        }
+        cout<<"Even:"<<even<<" Odd:"<<odd;
+        return 0;
+    }
+--------------------------------------------------------------------------------------
