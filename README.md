@@ -375,3 +375,45 @@ Ans:
         return 0;
     }
 --------------------------------------------------------------------------------------
+11. Reverse Integer.
+Ans:
+
+        #include <bits/stdc++.h>
+        using namespace std;
+
+        int main()
+        {
+           int num =12345;
+           long r=0;
+           int sum;
+           while(num){
+               r=num%10;
+               sum=sum*10+r;
+               num=num/10;
+           }
+            cout<<sum;
+            return 0;
+        }
+-----------------------------------------------------------------------------------------
+12. Check Anagram?
+Ans:
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
