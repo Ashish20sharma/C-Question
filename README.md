@@ -395,8 +395,32 @@ Ans:
             return 0;
         }
 -----------------------------------------------------------------------------------------
-12. Check Anagram?
+leetcode Question 2273. Find Resultant Array After Removing Anagrams.
 Ans:
+
+    #include <bits/stdc++.h>
+    using namespace std;
+    bool anagram(string s1,string s2){
+        sort(s1.begin(),s1.end());
+        sort(s2.begin(),s2.end());
+        return s1==s2;
+    }
+    int main()
+    {
+    vector<string>arr={"abba","baba","bbaa","cd","cd"};
+    vector<string>res;
+    res.push_back(arr[0]);
+    for(int i=1;i<arr.size();i++){
+        if(!anagram(arr[i-1],arr[i])){
+            res.push_back(arr[i]);
+        }
+    }
+    // for(auto it:res){
+    //     cout<<it<<"\n";
+    // }
+    return res;
+    return 0;
+    }
 
     
 
