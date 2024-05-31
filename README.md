@@ -421,8 +421,31 @@ Ans:
     return res;
     return 0;
     }
+--------------------------------------------------------------------------------------------
+Q:11 input: {2,1,5,8,7}
+     output: {9,3,6,13,15}
+Ans:
 
-    
+    #include <bits/stdc++.h>
+    using namespace std;
+
+    int main()
+    {
+        vector<int>arr={2,1,5,8,7};
+        vector<int>res;  //9 3 6 13 15
+        for(int i=0;i<arr.size();i++){
+            res.push_back(arr[i]+arr[arr.size()-1]);
+            break;
+        }
+        for(int i=0;i<arr.size()-1;i++){
+            res.push_back(arr[i]+arr[i+1]);
+        }
+        for(auto it:res){
+            cout<<it<<" ";
+        }
+        return 0;
+    }
+----------------------------------------------------------------------------------------------
 
 
 
