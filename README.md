@@ -446,9 +446,95 @@ Ans:
         return 0;
     }
 ----------------------------------------------------------------------------------------------
+12.Given an array of integers, write a function that creates a frequency array to count the occurrences of each integer in the array.
+Ans:
+
+    #include <bits/stdc++.h>
+    using namespace std;
 
 
+    int main() {
+    std::vector<int>arr={1,5,2,2,3,4,5,4,6,4,5} ;
+    map<int,int>count;
+    for(auto it:arr){
+        count[it]++;
+    }
+    for(auto it:count){
+        cout<<it.first<<" "<<it.second<<"\n";
+    }
+    return 0;
+    }
+---------------------------------------------------------------------------------------------
+13. Write a function that takes an array of integers as input and returns the element that appears most frequently in the array. If there is a tie, return any of the most frequent elements.  
+Ans:
 
+        #include <bits/stdc++.h>
+        using namespace std;
+
+
+        int main() {
+        std::vector<int>arr={1,5,2,2,3,4,5,4,6,4,4,4,5} ;
+        map<int,int>count;
+        for(auto it:arr){
+            count[it]++;
+        }
+        int max=0;
+        int maxfreq;
+        for(auto it:count){
+        if(it.second>max){
+            max=it.second;
+            maxfreq=it.first;
+        }
+        }
+        cout<<maxfreq<<" "<<max;
+        return 0;
+        }
+-------------------------------------------------------------------------------------------
+14.Given an array of integers and a threshold value, write a function to find all elements whose frequency is above the given threshold.
+Ans:
+
+    #include <bits/stdc++.h>
+    using namespace std;
+
+
+    int main() {
+    std::vector<int>arr={1,5,2,2,2,2,2,1,1,1,3,4,5,4,6,4,4,4,5} ;
+    map<int,int>count;
+    vector<int>newArr;
+    int threshold=3;
+    for(auto it:arr){
+        count[it]++;
+    }
+    for(auto it:count){
+    if(it.second>threshold){
+       newArr.push_back(it.first);
+    }
+    }
+    for(auto it:newArr){
+        cout<<it<<" ";
+    }
+    return 0;
+    }
+------------------------------------------------------------------------------------------------
+15.Write a function that takes a sentence as input and returns a frequency array (or dictionary) for the occurrences of each word in the sentence.
+Ans:
+
+    #include <bits/stdc++.h>
+    using namespace std;
+
+
+    int main() {
+    vector<string>s={"hellow","hii","hellow"};
+    map<string,int>count;
+    for(auto it:s){
+        count[it]++;
+    }
+    for(auto it:count){
+        cout<<it.first<<" "<<it.second<<"\n";
+    }
+    return 0;
+    }
+------------------------------------------------------------------------------------------------
 
 
 
