@@ -535,7 +535,47 @@ Ans:
     return 0;
     }
 ------------------------------------------------------------------------------------------------
+16.Write a program to find the missing number in a given array of integers.
+Ans:
 
+    #include <bits/stdc++.h>
+    using namespace std;
+
+    int main()
+    {
+        vector<int>arr={1,2,3,5};
+        int n=arr.size()+1;
+        int totalsum=(n*(n+1)/2);
+        int actualsum=0;
+        for(int i=0;i<arr.size();i++){
+            actualsum+=arr[i];
+        }
+        int missing=totalsum-actualsum;
+        cout<<missing;
+        return 0;
+    }
+------------------------------------------------------------------------------------------------------
+17.Write a program to merge two arrays into a single array.
+
+    #include <bits/stdc++.h>
+    using namespace std;
+
+    int main()
+    {
+        vector<int>arr1={1,2,5,3,4,5,6,};
+        vector<int>arr2={8,9,10,11,12};
+        vector<int>merged;
+        for(int i=0;i<arr1.size();i++){
+            merged.push_back(arr1[i]);
+        }
+        for(int i=0;i<arr2.size();i++){
+            merged.push_back(arr2[i]);
+        }
+        for(auto it:merged){
+            cout<<it <<" ";
+        }
+        return 0;
+    }
 
 
 
